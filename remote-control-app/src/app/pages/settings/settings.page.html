@@ -1,0 +1,37 @@
+ 
+<ion-content>
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons (click)="back()" slot="start">
+        <ion-icon name="chevron-back-outline" style="font-size: 32px;"></ion-icon>
+      </ion-buttons>
+      <ion-title >Settings</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+  <br>
+
+  <ion-list>
+    <ion-radio-group (ionChange)="pageController($event)"   [value]="pageControl">
+      <ion-list-header>
+        <ion-label style="font-size: 28px;">Controller</ion-label>
+      </ion-list-header>
+      <ion-item>
+        <ion-label>Joystick Controller</ion-label>
+        <ion-radio slot="start" value="0"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Nintende Gamepad</ion-label>
+        <ion-radio slot="start" value="1"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Range Controller</ion-label>
+        <ion-radio slot="start" value="2"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </ion-list>
+
+</ion-content>
